@@ -58,6 +58,7 @@ Category.create(:cat_id => 157090,:cat_title => "History",:cat_pages => 59,:cat_
 Category.create(:cat_id => 161042,:cat_title => "Humans",:cat_pages => 63,:cat_subcats => 22,:cat_files => 0)
 Category.create(:cat_id => 236283,:cat_title => "People",:cat_pages => 17,:cat_subcats => 13,:cat_files => 0)
 Category.create(:cat_id => 196957,:cat_title => "Mathematics",:cat_pages => 31,:cat_subcats => 18,:cat_files => 0)
+Category.create(:cat_id => 1,:cat_title => "Main_topic_classifications",:cat_pages => 1,:cat_subcats => 20,:cat_files => 0)
 
 Link.create(:cl_from => 1489599, :cl_to => "Sports", :cl_sortkey => "CULTURE\nSPORTS CULTURE",
             :cl_timestamp => "2005-04-29 10:32:42", :cl_sortkey_prefix => "Culture", :cl_collation => "uppercase",
