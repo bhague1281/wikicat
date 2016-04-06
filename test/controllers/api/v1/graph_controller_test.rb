@@ -8,10 +8,9 @@ class Api::V1::GraphControllerTest < ActionDispatch::IntegrationTest
       ]
     }
 
-    get api_v1_graph_url "sports"
+    get api_v1_graph_show_url "sports"
     assert_response :success
-    assert_equal result.to_json,
-                 @response.body
+    assert_equal result.to_json, @response.body
   end
 
 end

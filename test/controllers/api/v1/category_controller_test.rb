@@ -11,7 +11,6 @@ class Api::V1::CategoryControllerTest < ActionDispatch::IntegrationTest
 
     get api_v1_category_url "science"
     assert_response :success
-    assert_equal result.to_json,
-                 @response.body
+    assert_equal result.to_json, @response.body
   end
 end
