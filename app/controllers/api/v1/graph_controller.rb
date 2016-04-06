@@ -4,6 +4,7 @@ class Api::V1::GraphController < ApplicationController
     @category = Category.find_by_cat_title(category)
     @links = Link.where(:cl_to => @category.cat_title,
                         :cl_type => "subcat")
+
     render :json => @links,
     each_serializer: LinkSerializer,
     root: @category.cat_title.downcase
@@ -11,7 +12,8 @@ class Api::V1::GraphController < ApplicationController
 
   private
 
-  def graph_params
-    params.require(:category).permit(:cl_to, :cl_type)
-  end
+  # currently unused
+  # def graph_params
+  #   params.require(:category).permit(:cl_to, :cl_type)
+  # end
 end
