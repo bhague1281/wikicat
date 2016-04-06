@@ -2,7 +2,7 @@ class CategorySerializer < ActiveModel::Serializer
   attributes :title, :sub_categories, :_links
 
   def title
-    URI::encode(object.cl_sortkey
+    URI::encode(object.cat_title
         .encode('ASCII', {replace: ''})
         .gsub(/\s+/, ' ').strip.downcase.tr(" ", "_"))
   end
