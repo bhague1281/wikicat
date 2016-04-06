@@ -2,7 +2,8 @@ class CategorySerializer < ActiveModel::Serializer
   attributes :title, :sub_categories
 
   def title
-    object.cat_title.downcase.tr(" ", "_")
+    URI::encode(object.cat_title.force_encoding("ISO-8859-1"))
+        .encode("utf-8", replace: nil).downcase.gsub("%20", "_")
   end
 
   def sub_categories
