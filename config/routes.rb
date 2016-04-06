@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
-      get 'category/:category' => 'category#show'
-      get 'graph/:category' => 'graph#show'
+      get 'category/:category' => 'category#show', :as => :category
+      get 'graph/:category' => 'graph#show', :as => :graph
     end
   end
 
