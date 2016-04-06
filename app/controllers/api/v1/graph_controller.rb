@@ -6,7 +6,7 @@ class Api::V1::GraphController < ApplicationController
                         :cl_type => "subcat")
     render :json => @links,
     each_serializer: LinkSerializer,
-    root: @category.cat_title
+    root: @category.cat_title.downcase
   end
 
   private
